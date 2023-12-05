@@ -20,7 +20,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url("../../public/logos/wallpaper2.png");
+  background-image: url("../../public/logos/wallpaper1.png");
   background-size: cover; /* To cover the whole screen */
   background-position: center; /* To center the image */
   background-repeat: no-repeat;
