@@ -72,6 +72,7 @@ const Quote = ({selectedHouse}) => {
         </div>}
         <div className='flex justify-center text-3xl m-10'>
             {quote && quote.character.name}
+          {!quote && 'Click on a house logo to get a random quote from that house'}
         </div>
         {quote && 
         <div className='flex justify-center m-4'>
