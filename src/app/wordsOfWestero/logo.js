@@ -59,7 +59,7 @@ const Gallery = ({ houses, onHouseClick }) => {
               />
             </div>
             <div className='max-w-md'>
-              <p className='cursor-pointer text-center mt-5 text-sm'>{houseFullname}</p>
+              <p className='cursor-pointer text-center mt-5 text-sm text-black font-bold'>{houseFullname}</p>
             </div>
           </div>
         );

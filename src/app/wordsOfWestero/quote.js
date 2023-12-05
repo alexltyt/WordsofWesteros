@@ -61,9 +61,9 @@ const Quote = ({selectedHouse}) => {
 
   return (
     
-    <div className='flex flex-col justify-center'>
+    <div className='flex flex-col justify-center text-black'>
         
-        <div className='flex justify-center text-4xl m-10 text-center shadow-into'>
+        <div className='flex justify-center text-5xl m-10 text-center shadow-into font-extrabold'>
             {quote && quoteSentence}
         </div>
         {quote && 

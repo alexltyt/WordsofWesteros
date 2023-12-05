@@ -20,10 +20,37 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url("../../public/logos/wallpaper2.png");
+  background-size: cover; /* To cover the whole screen */
+  background-position: center; /* To center the image */
+  background-repeat: no-repeat;
 }
+
+/* globals.css or your specific CSS file */
+
+.bg-image-with-overlay {
+  position: relative;
+  background-image: url('../../public/logos/wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bg-image-with-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Ensure the content is above the overlay */
+.bg-image-with-overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
