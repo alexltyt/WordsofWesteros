@@ -44,11 +44,11 @@ const Logo = ({onHouseClick}) => {
 
 const Gallery = ({ houses, onHouseClick }) => {
   return (
-    <div className='flex flex-row mt-10 mb-10 justify-center w-screen'>
+    <div className='flex flex-row mt-10 mb-10 justify-center w-screen gap-1 md:gap-3'>
       {houses.map((house) => {
         const houseFullname = 'House of ' + house.name;
         return (
-          <div key={house.name} className='w-1/4 md:w-1/6 lg:w-1/12 relative' onClick={()=>onHouseClick(house.name)}>
+          <div key={house.name} className=' w-1/12 relative flex flex-col items-center' onClick={()=>onHouseClick(house.name)}>
             <div className='cursor-pointer relative'>
               <Image
                 title={houseFullname}
@@ -58,8 +58,8 @@ const Gallery = ({ houses, onHouseClick }) => {
                 height={150}
               />
             </div>
-            <div className='max-w-md'>
-              <p className='cursor-pointer text-center mt-5 text-sm text-black font-bold'>{houseFullname}</p>
+            <div className='w-2/3 md:w-full'>
+              <p className='hidden md:block cursor-pointer text-center mt-5 text-sm text-black font-bold'>{houseFullname}</p>
             </div>
           </div>
         );
